@@ -24,6 +24,7 @@ const FindSchool = () => {
                 if(res.data.success) {
                     setCategories(res.data.data.categories);
                     setCities(res.data.data.cities);
+                    filterSchool()
                 }
             } catch(err) {
                 console.log(err);

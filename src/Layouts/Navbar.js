@@ -19,22 +19,23 @@ const Navbar = () => {
 
     const GuestLinks = (
         <Fragment>
-            <li><Link to='/random_page'>Random</Link></li>
-            <li><Link to='/login'>Login</Link></li>
+            <li><button><Link to='/random_page'>Random</Link></button></li>
+            <li><button><Link to='/login'>Login</Link></button></li>
         </Fragment>
     )
     const AuthenticatedLinks = (
         <Fragment>
-            <li><Link to='/'>Dashboard</Link></li>
+            <li><button><Link to='/'>Dashboard</Link></button></li>
+            <li><button><Link to='/'>👤 {user && user.user_name}</Link></button></li>
+            <li><button><Link to='/find_school'>Find School</Link></button></li>
+            <li><button><Link to='/schedule'>Schedule</Link></button></li>
             <li>
-                👤 {user && user.user_name}
-            </li>
-            <li><Link to='/find_school'>Find School</Link></li>
-            <li>
-                <a onClick={onLogout} href="#!">
-                    <i className="fas fa-sign-out-alt" />{" "}
-                    <span className="">Logout</span>
-                </a>
+                <button>
+                    <a onClick={onLogout} href="#!">
+                        <i className="fas fa-sign-out-alt" />{" "}
+                        <span className="">Logout</span>
+                    </a>
+                </button>
             </li>
         </Fragment>
     )
